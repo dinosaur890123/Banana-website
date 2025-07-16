@@ -8,17 +8,25 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body class="bg-yellow-100 text-gray-700">
-        <header class="p-4 bg-yellow-300 text-center">
-            <h1 class="text-3xl font-bold">All About Bananas</h1>
+        <header class="p-4 bg-yellow-300 flex justify-between items-center">
+            <h1 class="text-3xl font-bold"><a href="#home">All About Bananas</a></h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#home" class="hover:underline">Home</a></li>
+                    <li><a href="#types" class="hover:underline">Types</a></li>
+                    <li><a href="#health" class="hover:underline">Health Benefits</a></li>
+                    <li><a href="#faq" class="hover:underline">FAQ</a></li>
+                </ul>
+            </nav>
         </header>
         <main class="p-6">
-            <section class="mb-8">
+            <section id="home" class="mb-8">
                 <h2 class="text-2xl font-semibold mb-2">The banana page!</h2>
                 <p>This page will tell you about bananas.</p>
             </section>
 
             <section class="bg-yellow-200 p-8 rounded-lg mb-8">
-                <div class="container mx-auto py-12">
+                <div id="types" class="container mx-auto py-12">
                     <h3 class="text-4xl font-bold text-center mb-8">Types of Bananas</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
@@ -45,8 +53,19 @@
                 </div>
             </section>
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold mb-2">Health Benefits</h2>
+                <h2 id="health" class="text-2xl font-semibold mb-2">Health Benefits</h2>
                 <p>Bananas are not only delicious but also packed with nutrients. They are a great source of potassium and vitamin C.</p>
+            </section>
+            <section class="mb-8">
+                <details id="faq" class="mb-8">
+                    <summary class="text-2xl font-semibold mb-2 cursor-pointer">Frequently Asked Questions</summary>
+                    <div class="bg-white p-4 rounded-lg mt-4">
+                        <h3 class="font-semibold">Are bananas good for you?</h3>
+                        <p>Yes, they are a great source of potassium and other vitamins.</p>
+                        <h3 class="font-semibold mt-4">Can you eat the peel?</h3>
+                        <p>While edible, the peel is not commonly eaten.</p>
+                    </div>
+                </details>
             </section>
         </main>
     <footer class="p-4 bg-yellow-300 text-center mt-8">Bananas are cool, but most importantly, they are more healthy than fast food.</footer>
